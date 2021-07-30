@@ -1,6 +1,4 @@
 name: content-web
-
-# This workflow is triggered on push to the 'content-web' directory of the  main branch of the repository
 on:
    push:
       branches:
@@ -8,10 +6,8 @@ on:
       paths:
          - 'content-web/**'
 
-   # Configure workflow to also support triggering manually
-workflow_dispatch:
+   workflow_dispatch:
 
-# Environment variables are defined so that they can be used throughout the job definitions.
 env:
   imageRepository: 'content-web'
   resourceGroupName: 'fabmedical-2907'
@@ -20,7 +16,6 @@ env:
   dockerfilePath: './content-web'
   tag: '${{ github.run_id  }}'
 
-# Jobs define the actions that take place when code is pushed to the main branch
 jobs:
   build-and-publish-docker-image:
     name: Build and Push Docker Image
