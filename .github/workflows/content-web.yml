@@ -8,7 +8,7 @@ on:
       paths:
          - 'content-web/**'
 
-   # Configure workflow to also support triggering manually
+# Configure workflow to also support triggering manually
 workflow_dispatch:
 
 # Environment variables are defined so that they can be used throughout the job definitions.
@@ -48,4 +48,4 @@ jobs:
         push: true
         tags: |
           ${{ env.containerRegistry }}/${{ env.imageRepository }}:${{ env.tag }}
-          ${{ env.containerRegistry }}/${{ env.imageRepository }}:latest
+          ${{ env.containerRegistry }}/${{ env.imageRepository }}:latest
