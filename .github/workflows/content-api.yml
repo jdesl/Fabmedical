@@ -1,3 +1,5 @@
+name: content-web
+
 # This workflow is triggered on push to the 'content-web' directory of the  main branch of the repository
 on:
    push:
@@ -46,4 +48,4 @@ jobs:
         push: true
         tags: |
           ${{ env.containerRegistry }}/${{ env.imageRepository }}:${{ env.tag }}
-          ${{ env.containerRegistry }}/${{ env.imageRepository }}:latest
+          ${{ env.containerRegistry }}/${{ env.imageRepository }}:latest
